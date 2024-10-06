@@ -1,0 +1,32 @@
+#include <iostream>
+#include <ostream>
+//#include "ListaIngredientes.cpp"
+#include <list>
+//
+// Created by Damaris on 04/10/2024.
+//
+#include "ListaReceta.cpp"
+int main() {
+
+    ListaIngredientes listaIngredientes;
+    listaIngredientes.agregarIngrediente("Tortillas", 20);
+    listaIngredientes.agregarIngrediente("Pollo", 60);
+    listaIngredientes.agregarIngrediente("Salsa verde", 40);
+
+    ListaIngredientes listaIngredientes1;
+    listaIngredientes.agregarIngrediente("Pollo", 60);
+    listaIngredientes.agregarIngrediente("Zanahorias", 10);
+    listaIngredientes.agregarIngrediente("Papas", 35);
+
+   // listaIngredientes.mostrarIngredientes();
+
+
+
+    ListaReceta listaReceta;
+    listaReceta.agregarReceta("Enchiladas", 2.5, listaIngredientes);
+    listaReceta.agregarReceta("Caldo de Pollo", 10.5, listaIngredientes1);
+    listaReceta.mostarReceta();
+    listaIngredientes.mostrarIngredientes();
+    return 0;
+}
+
